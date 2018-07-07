@@ -1,5 +1,6 @@
 <!doctype  <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,20 +10,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../TriviaGame/assets/javascript/app.js"></script>
 </head>
+
 <body>
     <div class="container">
-        <div class="questionField">
+        <div class="questionDiv">
             <h1>Trivia Game!</h1>
-            <h3 id="whens"></h3>
+            <form>
+                <h4>answer True or False</h4>
+                <br>
+                <h3 id="questionField"></h3>
+                <label name "true">True</label>
+                <input type="radio" name="choice" value="true">
+                </br>
+                <label name "false">False</label>
+                <input type="radio" name="choice" value="false">
+            </form>
+
         </div>
-        <div>
-            <h4>answer True or False</h4>
-            <button id="true">True</button><button id="false">false</button>
-        </div>
+
         <div>
             <h6 id="timer">Time</h6>
             <h2 id="results">answer</h2>
         </div>
     </div>
 </body>
+
 </html>>
