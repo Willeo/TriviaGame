@@ -38,7 +38,9 @@ for (var i = 0; i < questions.length; i++){
   $("#options").html("<input type=radio>",questions[i].choices);
   
 };
-  // logic for the selection
+  // logic for the selection - create dymanic creation of input for each choice
+  // add if esle for selection
+  
   
 
   // timer function works
