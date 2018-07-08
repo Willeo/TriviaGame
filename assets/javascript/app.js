@@ -8,17 +8,38 @@ $(document).ready(function() {
   var count = 10;
   var counter = setInterval(timer, 1000); //1000 will  run it every 1 second
 
-  var myList = [
-    "who wrote this?",
-    "what is this?",
-    "when did you write this?",
-    "why",
-    "how"
-  ];
-  var rand = myList[Math.floor(Math.random() * myList.length)];
+  var questions = [{
+    question: "What is the surname given to bastards born in Dorne?",
+    choices: ["Sands", "Stone", "Snow", "Flower"],
+    correct: 0
+  },{
+    question: "'The Mountain' is the nickname for which character?",
+    choices: ["Oberyn Martell", "Sandor Clegane", "Gregor Clegane", "Gerold Clegane"],
+    correct: 1
+    },{
+      question: "Who is Lord Commander of the Kingsguard at the beginning of Game of Thrones?",
+      choices: ["Ser Jeor Mormont", "Ser Loras Tyrell", "Ser Barristan Selmy", "Ser Jaime Lannister"],
+      correct: 3
+    },{
+      question: "Who was Margaery Tyrell's first husband?",
+      choices: ["Tommen Baratheon", "Stannis Baratheon", "Joffrey Baratheon", "Renly Baratheon"],
+      correct: 3
+    },{
+      question: "How many times has Sansa Stark been married?",
+      choices: ["Once", "Twice", "Three times", "None"],
+      correct: 1
+    }];
 
+    console.log(questions[2].question);
+    console.log(questions[2].choices)
+//var rand = questions[][Math.floor(Math.random() * questions.length)];
+for (var i = 0; i < questions.length; i++){
+  $("#qblock").html(questions[i].question);
+  $("#options").html("<input type=radio>",questions[i].choices);
+  
+};
   // logic for the selection
-  $("#whens").append(rand);
+  
 
   // timer function works
   function timer() {
@@ -27,7 +48,7 @@ $(document).ready(function() {
     if (count <= 0) {
       clearInterval(counter);
       //counter ended, Times up
-      $("#results").html("Times up!");
+      $("#timer").html("Times up!");
       return;
     }
     console.log(count);
